@@ -103,7 +103,7 @@ fieldset{
 background-color: blue;
 color: white;
 }
-#form input[type="text"]{
+#form input[type="text"] , #form select{
     height: 20px;
     width: 300px;
 }
