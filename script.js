@@ -149,12 +149,13 @@ function supprimer_stagiaire(event){
         
         return itemValue.code !== stagiaireSelectionner
         })
+            // rafraichissement de la table html
+        afficher_data(); 
     }else{
-        alert("Supression annulée.")
+        alert("Suppression annulée.")
     }
     
-    // rafraichissement de la table html
-    afficher_data(); 
+
 }
 
 
