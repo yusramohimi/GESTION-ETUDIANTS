@@ -144,11 +144,15 @@ function supprimer_stagiaire(event){
     event.preventDefault();
     console.log(event.currentTarget.id) //l indice du stagiaire 
     let stagiaireSelectionner = stagiaires[event.currentTarget.id].code
-    stagiaires = stagiaires.filter(function(itemValue){
+    if(confirm("Voulez-vous vraiment supprimer ce stagiaire ?")){
+        stagiaires = stagiaires.filter(function(itemValue){
         
         return itemValue.code !== stagiaireSelectionner
-        
-    })
+        })
+    }else{
+        alert("Supression annulée.")
+    }
+    
     // rafraichissement de la table html
     afficher_data(); 
 }
